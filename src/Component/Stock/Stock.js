@@ -20,7 +20,7 @@ useInterval(() => {
   // Your custom logic here
   for (const [key, value] of Object.entries(isRunning)) {
     if(value){
-      axios.get(`https://api.marketstack.com/v1/tickers/${key}/intraday?access_key=36c22294ca7508bb5a85f3cd0f5567bd&interval=1min`)
+      axios.get(`http://api.marketstack.com/v1/tickers/${key}/intraday?access_key=36c22294ca7508bb5a85f3cd0f5567bd&interval=1min`)
       .then(response =>{
         const azione =response.data;
         console.log('ho chiamato le api' + key)
