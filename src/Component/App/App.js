@@ -37,7 +37,7 @@ function removePreferiti(id){
 useEffect(()=>{
   if(valoreApi !== ''){
     setLoad(true);
-  axios.get(`http://api.marketstack.com/v1/tickers?access_key=${params}&search=${valoreApi}`)
+  axios.get(`https://api.marketstack.com/v1/tickers?access_key=${params}&search=${valoreApi}`)
   .then(response =>{
     const azione =response.data;
     console.log(azione);
